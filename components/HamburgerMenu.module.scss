@@ -72,3 +72,76 @@ $light: #efefef;
         cursor: pointer;
     }
 }
+
+.rightLayer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: auto;
+	left: 100%;
+	bottom: auto;
+	right: auto;
+	background: #F9DBBD;
+	transition: all 1.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+	&.active {
+		left: -100%;
+    }
+}
+
+.rightLayer2 {
+	background: #FCA17D;
+	transition-delay: .3s;
+}
+
+.rightLayer3 {
+	background: #DA627D;
+	transition-delay: .2s;
+}
+
+.menu {
+    background: #1B2735;
+    overflow: hidden;
+    transition-delay: 0s;
+    &.active {
+        left: 0%;
+        transition-delay: .4s;
+    }
+}
+
+.bounceIn {
+    opacity: 0;
+    animation: bounceIn .4s ease;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    transform-origin: 100% 0%;
+}
+    @keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.bounceIn2 {
+    animation-delay: 1.6s;
+}
+
+.bounceIn3 {
+    animation-delay: 1.7s;
+}
+
+.bounceIn4 {
+    animation-delay: 1.8s;
+}
