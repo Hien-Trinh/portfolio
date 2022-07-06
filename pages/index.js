@@ -1,6 +1,5 @@
 import Head from "next/head"
 import Header from "../components/Header"
-import Menu from "../components/Menu"
 import ShootingStarsArt from "../components/ShootingStarsArt"
 import Hero from "../components/Hero"
 
