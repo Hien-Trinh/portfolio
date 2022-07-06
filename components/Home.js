@@ -6,7 +6,7 @@ export default function Home() {
 
     return (
         <section id="home">
-            <div className={styles.hero} style={{top: -((y - 397.5) / 800) + 20 + "rem", left: -((x - 720) / 600) + 12 + "rem"}}>
+            <div className={styles.hero} style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>
                 <p className="text-white text-6xl">well done.</p>
             </div>
         </section>
