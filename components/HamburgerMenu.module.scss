@@ -82,7 +82,7 @@ $light: #efefef;
 	bottom: auto;
 	right: auto;
 	background: #F9DBBD;
-	transition: all 1.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
 	&.active {
 		left: -100%;
     }
@@ -90,7 +90,7 @@ $light: #efefef;
 
 .rightLayer2 {
 	background: #FCA17D;
-	transition-delay: .3s;
+	transition-delay: .4s;
 }
 
 .rightLayer3 {

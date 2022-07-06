@@ -4,6 +4,7 @@
 
 body {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    display: flex;
+    overflow: scroll;
+    height: 100vh;
     font-family: 'Poppins', sans-serif;
 }

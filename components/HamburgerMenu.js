@@ -1,6 +1,7 @@
 import styles from './HamburgerMenu.module.scss'
 import { useState } from 'react'
 import disableScroll from 'disable-scroll'
+import Link from 'next/link'
 
 export default function HamburgerMenu() {
     const [isActive, setActive] = useState(false)
@@ -18,7 +19,7 @@ export default function HamburgerMenu() {
             <div className={`${styles.rightLayer} ${styles.menu} ${isActive ? styles.active : null}`}>
                 <ul className="text-white text-6xl relative top-44 left-[12.5%]">
                     <li className="my-2 py-4">
-                        <button className={`${isActive ? styles.bounceIn : null}`} onClick={handleClick} href="#home">Home</button>
+                        <button className={`${isActive ? styles.bounceIn : null}`} onClick={handleClick}><Link href="#home">Home</Link></button>
                     </li>
                     <li className="my-2 py-4">
                         <button className={`${isActive ? `${styles.bounceIn} ${styles.bounceIn2}` : null}`} onClick={handleClick} href="#about">About</button>
