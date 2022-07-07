@@ -1,0 +1,24 @@
+.rightLayer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: auto;
+	left: 100%;
+	bottom: auto;
+	right: auto;
+	background: #F9DBBD;
+	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+	&.active {
+		left: -100%;
+    }
+}
+
+.rightLayer2 {
+	background: #FCA17D;
+	transition-delay: .4s;
+}
+
+.rightLayer3 {
+	background: #DA627D;
+	transition-delay: .2s;
+}
