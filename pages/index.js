@@ -1,7 +1,8 @@
 import Head from "next/head"
 import Header from "../components/Header"
-import ShootingStarsArt from "../components/ShootingStarsArt"
+import StarField from "../components/StarField"
 import Home from "../components/Home"
+import AboutMe from "../components/AboutMe"
 
 export default function Main() {
     return (
@@ -9,9 +10,11 @@ export default function Main() {
             <Head>
                 <title>David</title>
             </Head>
-            <ShootingStarsArt />
-            <Home />
-            <Header />
+            <StarField>
+                <Home />
+                <AboutMe />
+                <Header />
+            </StarField>
         </div>
     )
 }

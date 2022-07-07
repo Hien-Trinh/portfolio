@@ -19,20 +19,20 @@ export default function HamburgerMenu() {
             <div className={`${styles.rightLayer} ${styles.menu} ${isActive ? styles.active : null}`}>
                 <ul className="text-white text-6xl relative top-44 left-[12.5%]">
                     <li className="my-2 py-4">
-                        <button className={`${isActive ? styles.bounceIn : null}`} onClick={handleClick}><Link href="#home">Home</Link></button>
+                        <button className={`w-3/4 text-left ${isActive ? styles.bounceIn : null}`} onClick={handleClick}><Link href="#home">Home</Link></button>
                     </li>
                     <li className="my-2 py-4">
-                        <button className={`${isActive ? `${styles.bounceIn} ${styles.bounceIn2}` : null}`} onClick={handleClick} href="#about">About</button>
+                        <button className={`w-3/4 text-left ${isActive ? `${styles.bounceIn} ${styles.bounceIn2}` : null}`} onClick={handleClick} href="#about">About</button>
                     </li>
                     <li className="my-2 py-4">
-                        <button className={`${isActive ? `${styles.bounceIn} ${styles.bounceIn3}` : null}`} onClick={handleClick} href="#projects">Projects</button>
+                        <button className={`w-3/4 text-left ${isActive ? `${styles.bounceIn} ${styles.bounceIn3}` : null}`} onClick={handleClick} href="#projects">Projects</button>
                     </li>
                     <li className="my-2 py-4">
-                        <button className={`${isActive ? `${styles.bounceIn} ${styles.bounceIn4}` : null}`} onClick={handleClick} href="#contact">Contact</button>
+                        <button className={`w-3/4 text-left ${isActive ? `${styles.bounceIn} ${styles.bounceIn4}` : null}`} onClick={handleClick} href="#contact">Contact</button>
                     </li>
                 </ul>
             </div>
-            <div className={`${styles.btn1} ${isActive ? styles.open : null}`} onClick={handleClick}>
+            <div className={`${styles.hamburger} ${isActive ? styles.open : null}`} onClick={handleClick}>
                 <div className={styles.icon}></div>
             </div>
         </div>

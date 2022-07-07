@@ -38,7 +38,7 @@ $light: #efefef;
     top: $top;
 }
 
-.btn1{
+.hamburger{
     @include btn(40px, 30px);
     
     .icon {
@@ -113,7 +113,7 @@ $light: #efefef;
     animation: bounceIn .4s ease;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;
-    transform-origin: 100% 0%;
+    transform-origin: 0% 0%;
 }
     @keyframes bounceIn {
     0% {
