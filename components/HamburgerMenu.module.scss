@@ -73,34 +73,17 @@ $light: #efefef;
     }
 }
 
-.rightLayer {
-	position: absolute;
+.menu {
+    position: absolute;
+    overflow: hidden;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	top: auto;
 	left: 100%;
 	bottom: auto;
 	right: auto;
-	background: #F9DBBD;
+	background: #1B2735;
 	transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
-	&.active {
-		left: -100%;
-    }
-}
-
-.rightLayer2 {
-	background: #FCA17D;
-	transition-delay: .4s;
-}
-
-.rightLayer3 {
-	background: #DA627D;
-	transition-delay: .2s;
-}
-
-.menu {
-    background: #1B2735;
-    overflow: hidden;
     transition-delay: 0s;
     &.active {
         left: 0%;

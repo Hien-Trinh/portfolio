@@ -11,8 +11,10 @@ export default function Main() {
                 <title>David</title>
             </Head>
             <StarField>
-                <Home />
-                <AboutMe />
+                <div className="h-screen overflow-y-scroll snap-mandatory snap-y">
+                    <Home />
+                    <AboutMe />
+                </div>
                 <Header />
             </StarField>
         </div>
