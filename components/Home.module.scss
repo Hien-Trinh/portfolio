@@ -1,5 +1,10 @@
 .hero {
     position: relative;
-    top: 320px;
-    left: 15%;
+    width: fit-content;
+    left: -105%;
+    transition: all 1000ms cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        left: 0;
+    }
 }

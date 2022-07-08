@@ -1,13 +1,17 @@
 import styles from './Home.module.scss'
 import useMouseMove from '../lib/UseMouseMove'
+import useScrollMove from '../lib/UseScrollMove'
 
 export default function Home() {
     const [x, y] = useMouseMove()
+    const scrollY = (useScrollMove() <= 0)
 
     return (
-        <div id="home" className="h-screen w-screen bg-transparent snap-start snap-always">
-            <div className={styles.hero} style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>
-                <p className="text-white text-6xl">get good.</p>
+        <div id="home" className="h-screen w-screen bg-transparent snap-start">
+            <div className="relative w-max h-max left-[15%] top-80 overflow-hidden">
+                <div className={`${styles.hero} ${scrollY ? styles.active : null}`}>
+                    <p className="text-white text-6xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>get good.</p>
+                </div>
             </div>
         </div>
     )
