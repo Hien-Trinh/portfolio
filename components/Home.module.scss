@@ -8,3 +8,24 @@
         left: 0;
     }
 }
+
+.art {
+    position: absolute;
+    top: 208px;
+    right: -105%;
+    opacity: 0;
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        right: 15%;
+        opacity: 1;
+    }
+}
+
+.astronaut {
+    transition-duration: 1500ms;
+}
+
+.chips {
+    transition-duration: 1700ms;
+}

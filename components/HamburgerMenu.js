@@ -1,6 +1,5 @@
 import styles from './HamburgerMenu.module.scss'
 import { useState } from 'react'
-import disableScroll from 'disable-scroll'
 import Link from 'next/link'
 import TransitionLayer from '../layouts/TransitionLayer'
 import AnimationLayer from '../layouts/AnimationLayer'
@@ -14,7 +13,6 @@ export default function HamburgerMenu() {
 
     function handleClick() {
         setClick(!isClick)
-        isClick ? disableScroll.off() : disableScroll.on()
     }
 
     return (
