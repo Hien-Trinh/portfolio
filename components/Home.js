@@ -4,6 +4,9 @@ import Page from '../layouts/Page'
 import useMouseMove from '../lib/UseMouseMove'
 import useScrollMove from '../lib/UseScrollMove'
 
+import astronaut from '../public/images/astronaut.png'
+import chips from '../public/images/chips.png'
+
 export default function Home() {
     const [x, y] = useMouseMove()
     const scrollY = (useScrollMove() < 398)
@@ -16,10 +19,10 @@ export default function Home() {
                 </div>
             </div>
             <div className={`${styles.art} ${styles.astronaut} ${scrollY ? styles.active : null}`}>
-                <Image src="/../public/images/astronaut.png" alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
+                <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
-                <Image src="/../public/images/chips.png" alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+                <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className="absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600">*vecteezy.com</div>
         </Page>

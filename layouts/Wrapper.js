@@ -1,11 +1,16 @@
 import styles from "./Wrapper.module.scss"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import useScrollMove from "../lib/UseScrollMove"
 import enableScroll from "../lib/ScrollDisable"
 
 export default function Wrapper({ children }) {
+    const [inScroll, setInScroll] = useState(false)
     const scrollY = useScrollMove()
-    const inScroll = scrollY == 0 || scrollY == 795
+
+    useEffect(() => {
+        setInScroll(scrollY == 0 || scrollY == 795)
+        console.log("true")
+    }, [scrollY])
 
     useEffect(() => {
         !inScroll ? enableScroll(false) : enableScroll(true)
@@ -13,7 +18,7 @@ export default function Wrapper({ children }) {
     }, [inScroll])
 
     return (
-        <div id="wrapper" className={styles.wrapper}>
+        <div id="wrap" className={styles.wrapper}>
             {children}
         </div>
     )
