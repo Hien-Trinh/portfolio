@@ -6,6 +6,9 @@ import useScrollMove from '../lib/UseScrollMove'
 
 import astronaut from '../public/images/astronaut.png'
 import chips from '../public/images/chips.png'
+import cola from '../public/images/cola.png'
+import donut from '../public/images/donut.png'
+import Hero from '../layouts/Hero'
 
 export default function Home() {
     const [x, y] = useMouseMove()
@@ -14,15 +17,21 @@ export default function Home() {
     return (
         <Page id="home">
             <div className="absolute w-max h-max left-[15%] top-52 overflow-hidden">
-                <div className={`${styles.hero} ${scrollY ? styles.active : null}`}>
-                    <p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>get good.</p>
-                </div>
-            </div>
-            <div className={`${styles.art} ${styles.astronaut} ${scrollY ? styles.active : null}`}>
-                <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
+                <Hero>
+                    get good.
+                </Hero>
             </div>
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
-                <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+                <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+            </div>
+            <div className={`${styles.art} ${styles.cola} ${scrollY ? styles.active : null}`}>
+                <Image src={cola} alt="cola" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+            </div>
+            <div className={`${styles.art} ${styles.donut} ${scrollY ? styles.active : null}`}>
+                <Image src={donut} alt="donut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 20}px, ${(y - 397.5) / 20}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+            </div>
+            <div className={`${styles.art} ${styles.astronaut} ${scrollY ? styles.active : null}`}>
+                <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className="absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600">*vecteezy.com</div>
         </Page>

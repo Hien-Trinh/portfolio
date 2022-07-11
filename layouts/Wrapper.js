@@ -4,12 +4,16 @@ import useScrollMove from "../lib/UseScrollMove"
 import enableScroll from "../lib/ScrollDisable"
 
 export default function Wrapper({ children }) {
+    const [inScroll, setInScroll] = useState(false)
     const scrollY = useScrollMove()
-    const inScroll = (scrollY == 0 || scrollY == 795)
+
+    useEffect(() => {
+        const element = document.getElementById("wrap")
+        setInScroll((scrollY == 0 || scrollY == element.clientHeight))
+    }, [scrollY])
 
     useEffect(() => {
         inScroll ? enableScroll(true) : enableScroll(false)
-        console.log("setInScroll")
     }, [inScroll])
 
     return (
