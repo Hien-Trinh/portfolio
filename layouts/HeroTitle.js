@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import useMouseMove from '../lib/UseMouseMove'
 import useScrollMove from '../lib/UseScrollMove'
 
-export default function HeroTitle({ children, pageNum }) {
+export default function HeroTitle({ title, pageNum }) {
     const [pageLimitTop, setPageLimitTop] = useState(0)
     const [pageLimitBottom, setPageLimitBottom] = useState(0)
     const [x, y] = useMouseMove()
@@ -20,7 +20,7 @@ export default function HeroTitle({ children, pageNum }) {
     return (
         <div className={`${styles.title} ${inFrame ? styles.active : null}`}>
             <p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>
-                {children}
+                { title }
             </p>
         </div>
     )

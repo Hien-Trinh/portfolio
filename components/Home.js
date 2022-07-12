@@ -18,7 +18,7 @@ export default function Home() {
     return (
         <Page id="home">
             <Hero>
-                <HeroTitle pageNum={0}>get good.</HeroTitle>
+                <HeroTitle pageNum={0} title={"get good."}></HeroTitle>
             </Hero>
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
                 <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
