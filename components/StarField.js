@@ -15,7 +15,7 @@ export default function StarField( { children } ) {
             <div style={{transform: `translate3d(${(x - 720) / 20}px, ${(y - 397.5) / 20}px, 0px)`, position: 'fixed'}}>
                 <div className={styles.stars3}></div>
             </div>
-            {children}
+            { children }
         </div>
     )
 }

@@ -18,7 +18,7 @@ export default function Wrapper({ children }) {
 
     return (
         <div id="wrap" className={styles.wrapper}>
-            {children}
+            { children }
         </div>
     )
 }

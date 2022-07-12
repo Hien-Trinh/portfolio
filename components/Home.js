@@ -8,15 +8,18 @@ import astronaut from '../public/images/astronaut.png'
 import chips from '../public/images/chips.png'
 import cola from '../public/images/cola.png'
 import donut from '../public/images/donut.png'
-import HeroTitle from '../layouts/HeroTitle'
+import Hero from '../layouts/Hero'
 
 export default function Home() {
     const [x, y] = useMouseMove()
     const scrollY = (useScrollMove() < 398)
 
+    const pageNum = 0
+    const title = "get good."
+
     return (
-        <div id="home" className="h-screen w-screen bg-transparent snap-start snap-always">
-            <HeroTitle pageNum={0} title={"get good."}></HeroTitle>
+        <Page id="home">
+            <Hero pageNum={pageNum} title={<p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>{title}</p>} />
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
                 <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
@@ -30,6 +33,6 @@ export default function Home() {
                 <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className="absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600">*vecteezy.com</div>
-        </div>
+        </Page>
     )
 }
