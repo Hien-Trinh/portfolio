@@ -18,10 +18,12 @@ export default function HeroTitle({ title, pageNum }) {
     const inFrame = (scrollY < pageLimitBottom && scrollY > pageLimitTop)
 
     return (
-        <div className={`${styles.title} ${inFrame ? styles.active : null}`}>
-            <p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>
-                { title }
-            </p>
+        <div className="absolute w-max h-max left-[15%] top-52 overflow-hidden">
+            <div className={`${styles.title} ${inFrame ? styles.active : null}`}>
+                <p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>
+                    { title }
+                </p>
+            </div>
         </div>
     )
 }

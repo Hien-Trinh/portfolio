@@ -8,7 +8,6 @@ import astronaut from '../public/images/astronaut.png'
 import chips from '../public/images/chips.png'
 import cola from '../public/images/cola.png'
 import donut from '../public/images/donut.png'
-import Hero from '../layouts/Hero'
 import HeroTitle from '../layouts/HeroTitle'
 
 export default function Home() {
@@ -17,9 +16,7 @@ export default function Home() {
 
     return (
         <Page id="home">
-            <Hero>
-                <HeroTitle pageNum={0} title={"get good."}></HeroTitle>
-            </Hero>
+            <HeroTitle pageNum={0} title={"get good."}></HeroTitle>
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
                 <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
