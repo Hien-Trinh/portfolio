@@ -22,19 +22,19 @@ export default function HamburgerMenu() {
                 <ul className="text-white text-6xl relative top-44 left-[12.5%] w-3/4 overflow-hidden">
                     <li className="my-6">
                         <AnimationLayer isActive={isHover1} />
-                        <button className={`w-full py-2 text-left ${isClick ? styles.bounceIn : null}`} onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} onClick={handleClick}><Link href="#home">Home</Link></button>
+                        <Link href="#home" passHref><button className={`w-full py-2 text-left ${isClick ? styles.bounceIn : null}`} onMouseEnter={() => setHover1(true)} onMouseLeave={() => setHover1(false)} onClick={handleClick}>Home</button></Link>
                     </li>
                     <li className="my-6">
                         <AnimationLayer isActive={isHover2} />
-                        <button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn2}` : null}`} onMouseEnter={() => setHover2(true)} onMouseLeave={() => setHover2(false)} onClick={handleClick}><Link href="#about">About</Link></button>
+                        <Link href="#about" passHref><button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn2}` : null}`} onMouseEnter={() => setHover2(true)} onMouseLeave={() => setHover2(false)} onClick={handleClick}>About</button></Link>
                     </li>
                     <li className="my-6">
                         <AnimationLayer isActive={isHover3} />
-                        <button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn3}` : null}`} onMouseEnter={() => setHover3(true)} onMouseLeave={() => setHover3(false)} onClick={handleClick}><Link href="#projects">Projects</Link></button>
+                        <Link href="#projects" passHref><button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn3}` : null}`} onMouseEnter={() => setHover3(true)} onMouseLeave={() => setHover3(false)} onClick={handleClick}>Projects</button></Link>
                     </li>
                     <li className="my-6">
                         <AnimationLayer isActive={isHover4} />
-                        <button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn4}` : null}`} onMouseEnter={() => setHover4(true)} onMouseLeave={() => setHover4(false)} onClick={handleClick}><Link href="#contact">Contact</Link></button>
+                        <Link href="#contact" passHref><button className={`w-full py-2 text-left ${isClick ? `${styles.bounceIn} ${styles.bounceIn4}` : null}`} onMouseEnter={() => setHover4(true)} onMouseLeave={() => setHover4(false)} onClick={handleClick}>Contact</button></Link>
                     </li>
                 </ul>
             </div>
