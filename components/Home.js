@@ -17,17 +17,15 @@ export default function Home() {
 
     return (
         <Page id="home">
-            <Hero>
-                <HeroTitle pageNum={0}>get good.</HeroTitle>
-            </Hero>
+            <Hero children={<HeroTitle pageNum={0} children={"get good."} />} />
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
-                <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+                <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className={`${styles.art} ${styles.cola} ${scrollY ? styles.active : null}`}>
                 <Image src={cola} alt="cola" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 25}px, ${(y - 397.5) / 25}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className={`${styles.art} ${styles.donut} ${scrollY ? styles.active : null}`}>
-                <Image src={donut} alt="donut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 20}px, ${(y - 397.5) / 20}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
+                <Image src={donut} alt="donut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 22}px, ${(y - 397.5) / 22}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className={`${styles.art} ${styles.astronaut} ${scrollY ? styles.active : null}`}>
                 <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
