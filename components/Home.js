@@ -15,7 +15,7 @@ export default function Home() {
     const scrollY = (useScrollMove() < 398)
 
     return (
-        <Page id="home">
+        <div id="home" className="h-screen w-screen bg-transparent snap-start snap-always">
             <HeroTitle pageNum={0} title={"get good."}></HeroTitle>
             <div className={`${styles.art} ${styles.chips} ${scrollY ? styles.active : null}`}>
                 <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
@@ -30,6 +30,6 @@ export default function Home() {
                 <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
             </div>
             <div className="absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600">*vecteezy.com</div>
-        </Page>
+        </div>
     )
 }
