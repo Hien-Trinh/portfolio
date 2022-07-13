@@ -38,3 +38,14 @@
 .donut {
     transition-duration: 1900ms;
 }
+
+.license {
+    opacity: 0;
+    transition-delay: 0;
+    transition-duration: 2000ms;
+
+    &.active {
+        transition-delay: 3000ms;
+        opacity: 1;
+    }
+}

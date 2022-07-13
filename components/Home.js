@@ -32,7 +32,7 @@ export default function Home() {
             <div className={`${styles.art} ${styles.astronaut} ${scrollY ? styles.active : null}`}>
                 <Image src={astronaut} alt="astronaut" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 15}px, ${(y - 397.5) / 15}px, 0px)`, position: "absolute", top: 0, right: 0}}/>
             </div>
-            <div className="absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600">*vecteezy.com</div>
+            <div className={`${styles.license} ${scrollY? styles.active : null} absolute w-fit right-0 bottom-0 m-2 italic text-sm text-slate-600`}>*vecteezy.com</div>
         </div>
     )
 }
