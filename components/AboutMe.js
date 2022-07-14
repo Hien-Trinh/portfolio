@@ -1,4 +1,3 @@
-import Page from "../layouts/Page"
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
 

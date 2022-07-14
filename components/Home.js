@@ -1,6 +1,5 @@
 import styles from './Home.module.scss'
 import Image from 'next/image'
-import Page from '../layouts/Page'
 import useMouseMove from '../lib/UseMouseMove'
 import useScrollMove from '../lib/UseScrollMove'
 
