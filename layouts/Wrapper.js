@@ -21,10 +21,13 @@ export default function Wrapper({ children }) {
         const element = document.getElementById("wrap")
         const scrollbar = Scrollbar.get(document.getElementById("wrap"))
 
+        const home = document.getElementById("home")
+        const about = document.getElementById("about")
+
         if (scrollY - prevScrollY > 0) {
-            scrollbar.scrollTo(0, 795, 1000)
+            scrollbar.scrollIntoView(about)
         } else if (scrollY - prevScrollY < 0) {
-            scrollbar.scrollTo(0, 0, 1000)
+            scrollbar.scrollIntoView(home)
         }
         setInScroll(scrollY === 0 || scrollY === element.clientHeight)
     }, [scrollY])
