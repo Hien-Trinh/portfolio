@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import TransitionLayer from '../layouts/TransitionLayer'
 import AnimationLayer from '../layouts/AnimationLayer'
+import UseScrollPageTransition from '../lib/UseScrollPageTransition'
 
 export default function HamburgerMenu() {
     const [isClick, setClick] = useState(false)
