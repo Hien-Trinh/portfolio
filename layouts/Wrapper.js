@@ -1,7 +1,6 @@
 import styles from "./Wrapper.module.scss"
 import { useEffect, useState, useRef } from "react"
 import useScrollMove from "../lib/UseScrollMove"
-import enableScroll from "../lib/ScrollDisable"
 import Scrollbar from "smooth-scrollbar"
 
 function usePrevious(value) {
@@ -13,7 +12,6 @@ function usePrevious(value) {
 }
 
 export default function Wrapper({ children }) {
-    const [inScroll, setInScroll] = useState(false)
     const scrollY = useScrollMove()
     const prevScrollY = usePrevious(scrollY)
 
@@ -29,12 +27,7 @@ export default function Wrapper({ children }) {
         } else if (scrollY - prevScrollY < 0) {
             scrollbar.scrollIntoView(home)
         }
-        setInScroll(scrollY === 0 || scrollY === element.clientHeight)
     }, [scrollY])
-
-    useEffect(() => {
-        inScroll ? enableScroll(true) : enableScroll(false)
-    }, [inScroll])
 
     return (
         <div id="wrap" className={styles.wrapper}>
