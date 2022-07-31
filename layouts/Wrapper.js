@@ -1,8 +1,8 @@
 import styles from "./Wrapper.module.scss"
-import UseScrollPageTransition from "../lib/UseScrollPageTransition"
+import useScrollPageTransition from "../lib/UseScrollPageTransition"
 
 export default function Wrapper({ children }) {
-    UseScrollPageTransition()
+    useScrollPageTransition()
 
     return (
         <div id="wrap" className={styles.wrapper}>
