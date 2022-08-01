@@ -2,6 +2,7 @@ import styles from './Home.module.scss'
 import Image from 'next/image'
 import useMouseMove from '../lib/UseMouseMove'
 import useScrollMove from '../lib/UseScrollMove'
+import getInView from '../lib/GetInView'
 
 import astronaut from '../public/images/astronaut.png'
 import chips from '../public/images/chips.png'
@@ -11,10 +12,10 @@ import Hero from '../layouts/Hero'
 
 export default function Home() {
     const [x, y] = useMouseMove()
-    const inView = (useScrollMove() < 398)
 
     const pageNum = 0
     const title = "get good."
+    const inView = getInView(pageNum)
 
     return (
         <div id="home" className="relative h-screen w-screen bg-transparent snap-start snap-always">
