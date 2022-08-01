@@ -1,27 +1,23 @@
 import styles from "./Hero.module.scss"
 import { useEffect, useState } from "react"
-import useScrollMove from '../lib/UseScrollMove'
+import getInView from "../lib/GetInView"
 
 export default function Hero({ title, pageNum }) {
     const [pageHeight, setPageHeight] = useState(0)
-    const [pageLimitTop, setPageLimitTop] = useState(0)
-    const [pageLimitBottom, setPageLimitBottom] = useState(0)
-    const scrollY = useScrollMove()
+    const inView = getInView(pageNum)
 
     useEffect(() => {
         const element = document.getElementById("wrap")
-        const elementHeight = element.clientHeight
-        setPageHeight(elementHeight)
-        setPageLimitTop(elementHeight / 2 + elementHeight * (pageNum - 1))
-        setPageLimitBottom(elementHeight / 2 + elementHeight * pageNum)
+        setPageHeight(element.clientHeight)
     }, [])
-    
-    const inFrame = (scrollY < pageLimitBottom && scrollY > pageLimitTop)
 
     return (
-        <div className={styles.hero} style={{ top: `${208 + pageHeight * pageNum}px` }}>
-            <div className={`${styles.title} ${inFrame ? styles.active : null}`}>
-                { title }
+        <div
+            className={styles.hero}
+            style={{ top: `${208 + pageHeight * pageNum}px` }}
+        >
+            <div className={`${styles.title} ${inView ? styles.active : null}`}>
+                {title}
             </div>
         </div>
     )
