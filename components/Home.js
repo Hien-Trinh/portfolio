@@ -1,7 +1,6 @@
 import styles from './Home.module.scss'
 import Image from 'next/image'
 import useMouseMove from '../lib/UseMouseMove'
-import useScrollMove from '../lib/UseScrollMove'
 import getInView from '../lib/GetInView'
 
 import astronaut from '../public/images/astronaut.png'
