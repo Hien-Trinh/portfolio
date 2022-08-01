@@ -1,15 +1,13 @@
 import styles from "./Hero.module.scss"
 import { useEffect, useState } from "react"
-import getInView from "../lib/GetInView"
 
-export default function Hero({ title, pageNum }) {
+export default function Hero({ title, pageNum, inView }) {
     const [pageHeight, setPageHeight] = useState(0)
-    const inView = getInView(pageNum)
 
     useEffect(() => {
         const element = document.getElementById("wrap")
         setPageHeight(element.clientHeight)
-    }, [])
+    })
 
     return (
         <div
