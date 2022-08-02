@@ -17,8 +17,8 @@ export default function Home() {
     const inView = getInView(pageNum)
 
     return (
-        <div id="home" className="relative h-screen w-screen bg-transparent snap-start snap-always">
-            <Hero pageNum={pageNum} inView={inView} title={<p className="text-white text-8xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>{title}</p>} />
+        <div id="home" className="flex justify-center items-center relative h-screen w-screen bg-transparent">
+            <Hero pageNum={pageNum} inView={inView} title={<p className="text-white text-9xl mx-9 my-5" style={{transform: `translate3d(${(x - 720) / 50}px, ${(y - 397.5) / 50}px, 0px)`}}>{title}</p>} />
             <div className={`${styles.art} ${styles.chips} ${inView ? styles.active : null}`}>
                 <Image src={chips} alt="chips" layout="intrinsic" width={500} height={300} style={{transform: `translate3d(${(x - 720) / 24}px, ${(y - 397.5) / 24}px, 0px)`,position: "absolute", top: 0, right: 0}}/>
             </div>

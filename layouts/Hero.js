@@ -12,7 +12,7 @@ export default function Hero({ title, pageNum, inView }) {
     return (
         <div
             className={styles.hero}
-            style={{ top: `${208 + pageHeight * pageNum}px` }}
+            style={{ top: `${pageHeight * .35}px` }}
         >
             <div className={`${styles.title} ${inView ? styles.active : null}`}>
                 {title}
