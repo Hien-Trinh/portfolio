@@ -1,28 +1,6 @@
 .art {
     position: absolute;
     top: 40%;
-    opacity: 0;
-    transition: all cubic-bezier(0.645, 0.045, 0.355, 1);
-
-    &.active {
-        opacity: 1;
-    }
-}
-
-.astronaut {
-    transition-duration: 1500ms;
-}
-
-.chips {
-    transition-duration: 1700ms;
-}
-
-.cola {
-    transition-duration: 1800ms;
-}
-
-.donut {
-    transition-duration: 1900ms;
 }
 
 .license {
