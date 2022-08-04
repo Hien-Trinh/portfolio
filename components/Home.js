@@ -1,7 +1,7 @@
 import styles from './Home.module.scss'
 import Image from 'next/image'
 import useMouseMove from '../lib/UseMouseMove'
-import getInView from '../lib/GetInView'
+import GetInView from '../lib/GetInView'
 
 import astronaut from '../public/images/astronaut.png'
 import chips from '../public/images/chips.png'
@@ -14,7 +14,7 @@ export default function Home() {
 
     const pageNum = 0
     const title = "get good."
-    const inView = getInView(pageNum)
+    const inView = GetInView(pageNum)
 
     return (
         <div id="home" className="flex justify-center items-center relative h-screen w-screen bg-transparent">

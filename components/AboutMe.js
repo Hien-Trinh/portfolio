@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
-import getInView from "../lib/GetInView"
+import GetInView from "../lib/GetInView"
 
 import bg_about_base from "../public/images/bg_about_base.png"
 import bg_about_top from "../public/images/bg_about_top.png"
@@ -11,7 +11,7 @@ export default function AboutMe() {
 
     const pageNum = 1
     const title = "about"
-    const inView = getInView(pageNum)
+    const inView = GetInView(pageNum)
 
     return (
         <div id="about" className="flex justify-center items-center relative h-screen w-screen bg-transparent">
