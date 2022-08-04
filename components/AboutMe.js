@@ -1,3 +1,4 @@
+import styles from "./AboutMe.module.scss"
 import Image from "next/image"
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
@@ -17,6 +18,24 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
+    const mouseParallaxBase = {
+        transform: `translate3d(${(x - 720) / 60}px, ${
+            (y - 397.5) / 60
+        }px, 0px)`,
+    }
+
+    const mouseParallaxTitle = {
+        transform: `translate3d(${(x - 720) / 40}px, ${
+            (y - 397.5) / 40
+        }px, 0px)`,
+    }
+
+    const mouseParallaxTop = {
+        transform: `translate3d(${(x - 720) / 50}px, ${
+            (y - 397.5) / 50
+        }px, 0px)`,
+    }
+
     return (
         <div
             id="about"
@@ -24,12 +43,8 @@ export default function AboutMe() {
         >
             <div className="absolute w-[1280px] h-[720px]">
                 <div
-                    className="absolute top-[7.5%] left-[31.1%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 80}px, ${
-                            (y - 397.5) / 80
-                        }px, 0px)`,
-                    }}
+                    className={`${styles.bg1} ${inView ? styles.active : null}`}
+                    style={mouseParallaxBase}
                 >
                     <Image
                         src={bg_about_base_1}
@@ -40,12 +55,8 @@ export default function AboutMe() {
                     />
                 </div>
                 <div
-                    className="absolute top-[31.3%] left-[44.8%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 80}px, ${
-                            (y - 397.5) / 80
-                        }px, 0px)`,
-                    }}
+                    className={`${styles.bg2} ${inView ? styles.active : null}`}
+                    style={mouseParallaxBase}
                 >
                     <Image
                         src={bg_about_base_2}
@@ -56,12 +67,8 @@ export default function AboutMe() {
                     />
                 </div>
                 <div
-                    className="absolute top-[17.2%] left-[58.4%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 80}px, ${
-                            (y - 397.5) / 80
-                        }px, 0px)`,
-                    }}
+                    className={styles.bg3}
+                    style={mouseParallaxBase}
                 >
                     <Image
                         src={bg_about_base_3}
@@ -77,11 +84,7 @@ export default function AboutMe() {
                 title={
                     <p
                         className="text-white text-9xl mx-9 my-5"
-                        style={{
-                            transform: `translate3d(${(x - 720) / 50}px, ${
-                                (y - 397.5) / 50
-                            }px, 0px)`,
-                        }}
+                        style={mouseParallaxTitle}
                     >
                         {title}
                     </p>
@@ -89,12 +92,8 @@ export default function AboutMe() {
             />
             <div className="absolute w-[1280px] h-[720px]">
                 <div
-                    className="absolute top-[7.5%] left-[31.1%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 65}px, ${
-                            (y - 397.5) / 65
-                        }px, 0px)`,
-                    }}
+                    className={`${styles.bg1} ${inView ? styles.active : null}`}
+                    style={mouseParallaxTop}
                 >
                     <Image
                         src={bg_about_top_1}
@@ -105,12 +104,8 @@ export default function AboutMe() {
                     />
                 </div>
                 <div
-                    className="absolute top-[31.3%] left-[44.8%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 65}px, ${
-                            (y - 397.5) / 65
-                        }px, 0px)`,
-                    }}
+                    className={`${styles.bg2} ${inView ? styles.active : null}`}
+                    style={mouseParallaxTop}
                 >
                     <Image
                         src={bg_about_top_2}
@@ -121,12 +116,8 @@ export default function AboutMe() {
                     />
                 </div>
                 <div
-                    className="absolute top-[17.2%] left-[58.4%]"
-                    style={{
-                        transform: `translate3d(${(x - 720) / 65}px, ${
-                            (y - 397.5) / 65
-                        }px, 0px)`,
-                    }}
+                    className={styles.bg3}
+                    style={mouseParallaxTop}
                 >
                     <Image
                         src={bg_about_top_3}
