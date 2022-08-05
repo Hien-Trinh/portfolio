@@ -3,7 +3,7 @@ import Image from "next/image"
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
 import GetInView from "../lib/GetInView"
-import ShowMoreButton from "./ShowMoreButton"
+import ShowMoreButton from "../layouts/ShowMoreButton"
 
 import bg_about_base_1 from "../public/images/bg_about_base_1.png"
 import bg_about_base_2 from "../public/images/bg_about_base_2.png"
@@ -19,7 +19,7 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
-    const mouseParallaxBase =  {
+    const mouseParallaxBase = {
         transform: `translate3d(${(x - 720) / -80}px, ${
             (y - 397.5) / -80
         }px, 0px)`,

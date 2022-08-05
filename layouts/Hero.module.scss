@@ -3,7 +3,6 @@
     width: max-content;
     height: max-content;
     overflow: hidden;
-    top: 35%;
 }
 
 .title {
@@ -11,8 +10,9 @@
     width: fit-content;
     height: fit-content;
     top: 40%;
-    text-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    transition: all 1500ms cubic-bezier(0,0,.2,1);
+    text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 1500ms cubic-bezier(0, 0, 0.2, 1);
 
     &.active {
         top: 0;

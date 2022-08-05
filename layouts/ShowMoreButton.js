@@ -1,5 +1,4 @@
 import styles from "./ShowMoreButton.module.scss"
-import Link from "react"
 
 export default function ShowMoreButton({ mouseParallaxTitle }) {
     return (

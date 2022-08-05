@@ -1,31 +1,31 @@
 .leftLayer {
-	position: absolute;
+    position: absolute;
     width: 100%;
-	height: 76px;
-	left: -100%;
-	background: #F9DBBD;
-	transition: all .6s cubic-bezier(0.645, 0.045, 0.355, 1);
-	&.active {
-		left: 100%;
+    height: 76px;
+    left: -100%;
+    background: #f9dbbd;
+    transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+    &.active {
+        left: 100%;
     }
 }
 
 .leftLayer2 {
-	background: #FCA17D;
-	transition-delay: .1s;
+    background: #fca17d;
+    transition-delay: 0.1s;
 }
 
 .leftLayer3 {
-	background: #DA627D;
-	transition-delay: .2s;
+    background: #da627d;
+    transition-delay: 0.2s;
 }
 
 .leftLayer4 {
-    background: #DB5461;
-	overflow: hidden;
+    background: #db5461;
+    overflow: hidden;
     transition-delay: 0s;
     &.active {
         left: 0%;
-        transition-delay: .2s;
+        transition-delay: 0.2s;
     }
 }
