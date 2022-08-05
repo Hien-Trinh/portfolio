@@ -3,6 +3,7 @@ import Image from "next/image"
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
 import GetInView from "../lib/GetInView"
+import ShowMoreButton from "./ShowMoreButton"
 
 import bg_about_base_1 from "../public/images/bg_about_base_1.png"
 import bg_about_base_2 from "../public/images/bg_about_base_2.png"
@@ -66,10 +67,7 @@ export default function AboutMe() {
                         height={466}
                     />
                 </div>
-                <div
-                    className={styles.bg3}
-                    style={mouseParallaxBase}
-                >
+                <div className={styles.bg3} style={mouseParallaxBase}>
                     <Image
                         src={bg_about_base_3}
                         alt="bg_about_base_3"
@@ -115,10 +113,7 @@ export default function AboutMe() {
                         height={466}
                     />
                 </div>
-                <div
-                    className={styles.bg3}
-                    style={mouseParallaxTop}
-                >
+                <div className={styles.bg3} style={mouseParallaxTop}>
                     <Image
                         src={bg_about_top_3}
                         alt="bg_about_top_3"
@@ -127,6 +122,9 @@ export default function AboutMe() {
                         height={466}
                     />
                 </div>
+            </div>
+            <div className="w-[160.43px] h-[57px]" style={mouseParallaxTitle}>
+                <ShowMoreButton />
             </div>
         </div>
     )
