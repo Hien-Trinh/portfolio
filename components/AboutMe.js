@@ -19,9 +19,9 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
-    const mouseParallaxBase = {
-        transform: `translate3d(${(x - 720) / 60}px, ${
-            (y - 397.5) / 60
+    const mouseParallaxBase =  {
+        transform: `translate3d(${(x - 720) / -80}px, ${
+            (y - 397.5) / -80
         }px, 0px)`,
     }
 
@@ -32,8 +32,8 @@ export default function AboutMe() {
     }
 
     const mouseParallaxTop = {
-        transform: `translate3d(${(x - 720) / 50}px, ${
-            (y - 397.5) / 50
+        transform: `translate3d(${(x - 720) / -55}px, ${
+            (y - 397.5) / -55
         }px, 0px)`,
     }
 
@@ -123,9 +123,7 @@ export default function AboutMe() {
                     />
                 </div>
             </div>
-            <div className="w-[160.43px] h-[57px]" style={mouseParallaxTitle}>
-                <ShowMoreButton />
-            </div>
+            <ShowMoreButton mouseParallaxTitle={mouseParallaxTitle} />
         </div>
     )
 }
