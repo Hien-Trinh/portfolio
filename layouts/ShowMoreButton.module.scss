@@ -1,18 +1,23 @@
-.container {
+.button {
     position: absolute;
     top: 60%;
     width: fit-content;
     height: fit-content;
     background-color: #ff686b;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff686b;
     border-radius: 9999px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.button {
     white-space: nowrap;
     text-align: center;
     font-size: 20px;
     color: white;
     padding: 10px;
+
+    &:hover {
+        background-color: transparent;
+        color: #ff686b;
+    }
 }

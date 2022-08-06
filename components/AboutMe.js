@@ -32,8 +32,14 @@ export default function AboutMe() {
     }
 
     const mouseParallaxTop = {
-        transform: `translate3d(${(x - 720) / -55}px, ${
-            (y - 397.5) / -55
+        transform: `translate3d(${(x - 720) / -50}px, ${
+            (y - 397.5) / -50
+        }px, 0px)`,
+    }
+
+    const mouseParallaxButton = {
+        transform: `translate3d(${(x - 720) / 60}px, ${
+            (y - 397.5) / 60
         }px, 0px)`,
     }
 
@@ -123,7 +129,7 @@ export default function AboutMe() {
                     />
                 </div>
             </div>
-            <ShowMoreButton mouseParallaxTitle={mouseParallaxTitle} />
+            <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} />
         </div>
     )
 }
