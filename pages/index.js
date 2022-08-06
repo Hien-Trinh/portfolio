@@ -4,6 +4,7 @@ import StarField from "../components/StarField"
 import Wrapper from "../layouts/Wrapper"
 import Home from "../components/Home"
 import AboutMe from "../components/AboutMe"
+import Projects from "../components/Projects"
 
 export default function Main() {
     return (
@@ -15,6 +16,7 @@ export default function Main() {
                 <Wrapper>
                     <Home />
                     <AboutMe />
+                    <Projects />
                 </Wrapper>
                 <Header />
             </StarField>

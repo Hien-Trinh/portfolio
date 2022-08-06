@@ -1,4 +1,4 @@
-import styles from "./AboutMe.module.scss"
+import styles from "./Projects.module.scss"
 import Image from "next/image"
 import Hero from "../layouts/Hero"
 import ShowMoreButton from "../layouts/ShowMoreButton"
@@ -12,11 +12,11 @@ import bg_about_top_1 from "../public/images/bg_about_top_1.png"
 import bg_about_top_2 from "../public/images/bg_about_top_2.png"
 import bg_about_top_3 from "../public/images/bg_about_top_3.png"
 
-export default function AboutMe() {
+export default function Projects() {
     const [x, y] = useMouseMove()
 
-    const pageNum = 1
-    const title = "about"
+    const pageNum = 2
+    const title = "projects"
     const inView = GetInView(pageNum)
 
     const mouseParallaxBase = {
@@ -45,7 +45,7 @@ export default function AboutMe() {
 
     return (
         <div
-            id="about"
+            id="projects"
             className="flex justify-center items-center relative h-screen w-screen bg-transparent"
         >
             <div className="absolute w-[1280px] h-[720px]">
