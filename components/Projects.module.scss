@@ -1,27 +1,37 @@
-.bg1 {
+.triangle {
     position: absolute;
-    top: 17.2%;
-    left: 31.1%;
-    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1);
-
-    &.active {
-        top: 7.5%;
-    }
+    -webkit-text-stroke: 12px #ff686b;
+    color: transparent;
 }
 
-.bg2 {
-    position: absolute;
-    top: 17.2%;
-    left: 44.8%;
-    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1);
-
-    &.active {
-        top: 31.3%;
-    }
+.triangle1 {
+    top: 20%;
+    left: 15%;
+    font-size: 300px;
 }
 
-.bg3 {
-    position: absolute;
-    top: 17.2%;
-    left: 58.4%;
+.triangle2 {
+    top: 0%;
+    left: 25%;
+    font-size: 400px;
+    transform: rotate(180deg);
+}
+
+.triangle3 {
+    top: 50%;
+    left: 38%;
+    font-size: 200px;
+}
+
+.triangle4 {
+    top: 0%;
+    left: 46.5%;
+    font-size: 350px;
+}
+
+.triangle5 {
+    top: 40%;
+    left: 52%;
+    font-size: 300px;
+    transform: rotate(180deg);
 }

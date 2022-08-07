@@ -5,13 +5,6 @@ import ShowMoreButton from "../layouts/ShowMoreButton"
 import useMouseMove from "../lib/UseMouseMove"
 import GetInView from "../lib/GetInView"
 
-import bg_about_base_1 from "../public/images/bg_about_base_1.png"
-import bg_about_base_2 from "../public/images/bg_about_base_2.png"
-import bg_about_base_3 from "../public/images/bg_about_base_3.png"
-import bg_about_top_1 from "../public/images/bg_about_top_1.png"
-import bg_about_top_2 from "../public/images/bg_about_top_2.png"
-import bg_about_top_3 from "../public/images/bg_about_top_3.png"
-
 export default function Projects() {
     const [x, y] = useMouseMove()
 
@@ -48,41 +41,6 @@ export default function Projects() {
             id="projects"
             className="flex justify-center items-center relative h-screen w-screen bg-transparent"
         >
-            <div className="absolute w-[1280px] h-[720px]">
-                <div
-                    className={`${styles.bg1} ${inView ? styles.active : null}`}
-                    style={mouseParallaxBase}
-                >
-                    <Image
-                        src={bg_about_base_1}
-                        alt="bg_about_base_1"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div
-                    className={`${styles.bg2} ${inView ? styles.active : null}`}
-                    style={mouseParallaxBase}
-                >
-                    <Image
-                        src={bg_about_base_2}
-                        alt="bg_about_base_2"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div className={styles.bg3} style={mouseParallaxBase}>
-                    <Image
-                        src={bg_about_base_3}
-                        alt="bg_about_base_3"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-            </div>
             <Hero
                 inView={inView}
                 title={
@@ -94,42 +52,13 @@ export default function Projects() {
                     </p>
                 }
             />
-            <div className="absolute w-[1280px] h-[720px]">
-                <div
-                    className={`${styles.bg1} ${inView ? styles.active : null}`}
-                    style={mouseParallaxTop}
-                >
-                    <Image
-                        src={bg_about_top_1}
-                        alt="bg_about_top_1"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div
-                    className={`${styles.bg2} ${inView ? styles.active : null}`}
-                    style={mouseParallaxTop}
-                >
-                    <Image
-                        src={bg_about_top_2}
-                        alt="bg_about_top_2"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div className={styles.bg3} style={mouseParallaxTop}>
-                    <Image
-                        src={bg_about_top_3}
-                        alt="bg_about_top_3"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
+            <div className="absolute w-[1280px] h-[720px]" style={mouseParallaxTop}>
+                <div class={`${styles.triangle} ${styles.triangle1}`}>&#9650;</div>
+                <div class={`${styles.triangle} ${styles.triangle2}`}>&#9650;</div>
+                <div class={`${styles.triangle} ${styles.triangle3}`}>&#9650;</div>
+                <div class={`${styles.triangle} ${styles.triangle4}`}>&#9650;</div>
+                <div class={`${styles.triangle} ${styles.triangle5}`}>&#9650;</div>
             </div>
-            <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} />
         </div>
     )
 }
