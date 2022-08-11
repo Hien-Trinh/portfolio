@@ -2,6 +2,7 @@ import styles from "./AboutMe.module.scss"
 import Image from "next/image"
 import Hero from "../layouts/Hero"
 import ShowMoreButton from "../layouts/ShowMoreButton"
+import AboutMeExtended from "./AboutMeExtended"
 import useMouseMove from "../lib/UseMouseMove"
 import GetInView from "../lib/GetInView"
 
@@ -130,6 +131,7 @@ export default function AboutMe() {
                 </div>
             </div>
             <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} />
+            <AboutMeExtended />
         </div>
     )
 }
