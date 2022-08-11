@@ -2,7 +2,6 @@ import styles from "./AboutMe.module.scss"
 import Image from "next/image"
 import Hero from "../layouts/Hero"
 import ShowMoreButton from "../layouts/ShowMoreButton"
-import AboutMeExtended from "./AboutMeExtended"
 import useMouseMove from "../lib/UseMouseMove"
 import GetInView from "../lib/GetInView"
 
@@ -13,7 +12,7 @@ import bg_about_top_1 from "../public/images/bg_about_top_1.png"
 import bg_about_top_2 from "../public/images/bg_about_top_2.png"
 import bg_about_top_3 from "../public/images/bg_about_top_3.png"
 
-export default function AboutMe() {
+export default function AboutMe({ aboutMeActive, setAboutMeActive }) {
     const [x, y] = useMouseMove()
 
     const pageNum = 1
@@ -130,8 +129,7 @@ export default function AboutMe() {
                     />
                 </div>
             </div>
-            <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} />
-            <AboutMeExtended />
+            <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} handleClick={() => setAboutMeActive(!aboutMeActive)} />
         </div>
     )
 }
