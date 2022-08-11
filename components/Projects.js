@@ -53,11 +53,11 @@ export default function Projects() {
                 }
             />
             <div className="absolute w-[1280px] h-[720px]" style={mouseParallaxTop}>
-                <div class={`${styles.triangle} ${styles.triangle1}`}>&#9650;</div>
-                <div class={`${styles.triangle} ${styles.triangle2}`}>&#9650;</div>
-                <div class={`${styles.triangle} ${styles.triangle3}`}>&#9650;</div>
-                <div class={`${styles.triangle} ${styles.triangle4}`}>&#9650;</div>
-                <div class={`${styles.triangle} ${styles.triangle5}`}>&#9650;</div>
+                <div className={`${styles.triangle} ${styles.triangle1}`}>&#9650;</div>
+                <div className={`${styles.triangle} ${styles.triangle2}`}>&#9650;</div>
+                <div className={`${styles.triangle} ${styles.triangle3}`}>&#9650;</div>
+                <div className={`${styles.triangle} ${styles.triangle4}`}>&#9650;</div>
+                <div className={`${styles.triangle} ${styles.triangle5}`}>&#9650;</div>
             </div>
         </div>
     )

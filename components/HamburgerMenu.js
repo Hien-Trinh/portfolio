@@ -4,7 +4,7 @@ import TransitionLayer from "../layouts/TransitionLayer"
 import AnimationLayer from "../layouts/AnimationLayer"
 import useSetScrollPosition from "../lib/UseSetScrollPosition"
 
-export default function HamburgerMenu() {
+export default function HamburgerMenu({ setPageNum }) {
     const [isClick, setClick] = useState(false)
     const [isHover1, setHover1] = useState(false)
     const [isHover2, setHover2] = useState(false)
@@ -17,6 +17,7 @@ export default function HamburgerMenu() {
 
     function HandlePageClick(pageNum) {
         setClick(!isClick)
+        setPageNum(pageNum)
         useSetScrollPosition(pageNum)
     }
 

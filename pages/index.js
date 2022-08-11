@@ -9,6 +9,7 @@ import Projects from "../components/Projects"
 import { useState } from "react"
 
 export default function Main() {
+    const [pageNum, setPageNum] = useState(0)
     const [aboutMeActive, setAboutMeActive] = useState(false)
 
     return (
@@ -17,12 +18,12 @@ export default function Main() {
                 <title>David</title>
             </Head>
             <StarField>
-                <Wrapper>
+                <Wrapper pageNum={pageNum} setPageNum={setPageNum}>
                     <Home />
                     <AboutMe aboutMeActive={aboutMeActive} setAboutMeActive={setAboutMeActive} />
                     <Projects />
                 </Wrapper>
-                <Header />
+                <Header setPageNum={setPageNum} />
                 <AboutMeExtended isActive={aboutMeActive} />
             </StarField>
         </main>
