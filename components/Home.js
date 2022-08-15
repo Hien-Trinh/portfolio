@@ -1,6 +1,7 @@
 import styles from "./Home.module.scss"
 import Image from "next/image"
 import useMouseMove from "../lib/UseMouseMove"
+import GetPageWidthHeight from "../lib/GetPageWidthHeight"
 import GetInView from "../lib/GetInView"
 
 import astronaut from "../public/images/astronaut.png"
@@ -11,6 +12,7 @@ import Hero from "../layouts/Hero"
 
 export default function Home() {
     const [x, y] = useMouseMove()
+    const [pageWidth, pageHeight] = GetPageWidthHeight()
 
     const pageNum = 0
     const top = "35%"
@@ -19,8 +21,8 @@ export default function Home() {
 
     const mouseParallax = (n) => {
         return {
-            transform: `translate3d(${(x - 720) / n}px, ${
-                (y - 397.5) / n
+            transform: `translate3d(${(x - pageWidth / 2) / n}px, ${
+                (y - pageHeight / 2) / n
             }px, 0px)`,
         }
     }

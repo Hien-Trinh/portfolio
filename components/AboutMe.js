@@ -3,6 +3,7 @@ import Image from "next/image"
 import Hero from "../layouts/Hero"
 import ShowMoreButton from "../layouts/ShowMoreButton"
 import useMouseMove from "../lib/UseMouseMove"
+import GetPageWidthHeight from "../lib/GetPageWidthHeight"
 import GetInView from "../lib/GetInView"
 
 import bg_about_base_1 from "../public/images/bg_about_base_1.png"
@@ -14,32 +15,33 @@ import bg_about_top_3 from "../public/images/bg_about_top_3.png"
 
 export default function AboutMe({ aboutMeActive, setAboutMeActive }) {
     const [x, y] = useMouseMove()
+    const [pageWidth, pageHeight] = GetPageWidthHeight()
 
     const pageNum = 1
     const title = "about"
     const inView = GetInView(pageNum)
 
     const mouseParallaxBase = {
-        transform: `translate3d(${(x - 720) / -80}px, ${
-            (y - 397.5) / -80
+        transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
+            (y - pageHeight / 2) / -80
         }px, 0px)`,
     }
 
     const mouseParallaxTitle = {
-        transform: `translate3d(${(x - 720) / 40}px, ${
-            (y - 397.5) / 40
+        transform: `translate3d(${(x - pageWidth / 2) / 40}px, ${
+            (y - pageHeight / 2) / 40
         }px, 0px)`,
     }
 
     const mouseParallaxTop = {
-        transform: `translate3d(${(x - 720) / -50}px, ${
-            (y - 397.5) / -50
+        transform: `translate3d(${(x - pageWidth / 2) / -50}px, ${
+            (y - pageHeight / 2) / -50
         }px, 0px)`,
     }
 
     const mouseParallaxButton = {
-        transform: `translate3d(${(x - 720) / 60}px, ${
-            (y - 397.5) / 60
+        transform: `translate3d(${(x - pageWidth / 2) / 60}px, ${
+            (y - pageHeight / 2) / 60
         }px, 0px)`,
     }
 
