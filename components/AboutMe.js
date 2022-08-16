@@ -136,18 +136,16 @@ export default function AboutMe() {
                     />
                 </div>
             </div>
-            <Hero
-                inView={inView}
-                title={
-                    <p
-                        className="text-white text-9xl mx-9 my-5"
-                        style={mouseParallaxTitle}
+            <div className="absolute w-[1280px] h-[720px] flex items-center justify-center">
+                <div className={`${styles.hero} ${aboutMe ? styles.active : null}`}>
+                    <div
+                        className={`${styles.title} ${
+                            inView ? styles.inView : null
+                        }`}
                     >
-                        {title}
-                    </p>
-                }
-            />
-            <div className="absolute w-[1280px] h-[720px]">
+                        <p style={mouseParallaxTitle}>{title}</p>
+                    </div>
+                </div>
                 <div
                     className={`${styles.bg3} ${
                         inView ? styles.inView : null
@@ -165,7 +163,9 @@ export default function AboutMe() {
             </div>
             <div className={styles.textbox}>
                 <p
-                    className={`${styles.text} ${aboutMe ? styles.active : null}`}
+                    className={`${styles.text} ${
+                        aboutMe ? styles.active : null
+                    }`}
                     style={mouseParallaxText}
                 >
                     hello, my name is david

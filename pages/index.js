@@ -4,7 +4,6 @@ import StarField from "../components/StarField"
 import Wrapper from "../layouts/Wrapper"
 import Home from "../components/Home"
 import AboutMe from "../components/AboutMe"
-import AboutMeExtended from "../components/AboutMeExtended"
 import Projects from "../components/Projects"
 import { useState } from "react"
 
@@ -24,7 +23,6 @@ export default function Main() {
                     <Projects />
                 </Wrapper>
                 <Header setPageNum={setPageNum} />
-                <AboutMeExtended isActive={aboutMeActive} />
             </StarField>
         </main>
     )
