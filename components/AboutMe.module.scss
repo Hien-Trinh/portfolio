@@ -1,27 +1,106 @@
 .bg1 {
     position: absolute;
+    overflow: hidden;
+    direction: rtl;
     top: 17.2%;
     left: 31.1%;
-    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1);
+    width: 133px;
+    height: 466px;
+    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1),
+        left 1500ms cubic-bezier(0, 0, 0.2, 1),
+        width 1500ms cubic-bezier(0, 0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0, 0, 0.2, 1);
+
+    &.inView {
+        top: 7.5%;
+    }
 
     &.active {
-        top: 7.5%;
+        left: 35.3%;
+        width: 100px;
+        opacity: 0;
     }
 }
 
 .bg2 {
     position: absolute;
+    overflow: hidden;
+    direction: rtl;
     top: 17.2%;
     left: 44.8%;
-    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1);
+    width: 133px;
+    height: 466px;
+    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1),
+        left 1500ms cubic-bezier(0, 0, 0.2, 1),
+        width 1500ms cubic-bezier(0, 0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0, 0, 0.2, 1);
+
+    &.inView {
+        top: 31.3%;
+    }
 
     &.active {
-        top: 31.3%;
+        left: 49.1%;
+        width: 100px;
+        opacity: 0;
     }
 }
 
 .bg3 {
     position: absolute;
+    overflow: hidden;
+    direction: rtl;
     top: 17.2%;
     left: 58.4%;
+    width: 133px;
+    height: 466px;
+    transition: left 1500ms cubic-bezier(0, 0, 0.2, 1),
+        top 1500ms cubic-bezier(0, 0, 0.2, 1),
+        width 1500ms cubic-bezier(0, 0, 0.2, 1),
+        height 1500ms cubic-bezier(0, 0, 0.2, 1);
+
+    &.active {
+        left: 63%;
+        width: 114px;
+    }
+}
+
+.button {
+    position: absolute;
+    top: 60%;
+    width: fit-content;
+    height: fit-content;
+    background-color: #ff686b;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ff686b;
+    border-radius: 9999px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    white-space: nowrap;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+
+    &:hover {
+        background-color: transparent;
+        color: #ff686b;
+    }
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    backdrop-filter: blur(5px);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        opacity: 1;
+    }
 }

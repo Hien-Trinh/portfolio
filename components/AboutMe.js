@@ -1,7 +1,7 @@
 import styles from "./AboutMe.module.scss"
+import { useState } from "react"
 import Image from "next/image"
 import Hero from "../layouts/Hero"
-import ShowMoreButton from "../layouts/ShowMoreButton"
 import useMouseMove from "../lib/UseMouseMove"
 import GetPageWidthHeight from "../lib/GetPageWidthHeight"
 import GetInView from "../lib/GetInView"
@@ -13,9 +13,10 @@ import bg_about_top_1 from "../public/images/bg_about_top_1.png"
 import bg_about_top_2 from "../public/images/bg_about_top_2.png"
 import bg_about_top_3 from "../public/images/bg_about_top_3.png"
 
-export default function AboutMe({ aboutMeActive, setAboutMeActive }) {
+export default function AboutMe() {
     const [x, y] = useMouseMove()
     const [pageWidth, pageHeight] = GetPageWidthHeight()
+    const [aboutMe, setAboutMe] = useState(false)
 
     const pageNum = 1
     const title = "about"
@@ -52,34 +53,78 @@ export default function AboutMe({ aboutMeActive, setAboutMeActive }) {
         >
             <div className="absolute w-[1280px] h-[720px]">
                 <div
-                    className={`${styles.bg1} ${inView ? styles.active : null}`}
+                    className={`${styles.bg1} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
                     style={mouseParallaxBase}
                 >
                     <Image
                         src={bg_about_base_1}
                         alt="bg_about_base_1"
-                        layout="intrinsic"
+                        layout="fixed"
                         width={133}
                         height={466}
                     />
                 </div>
                 <div
-                    className={`${styles.bg2} ${inView ? styles.active : null}`}
+                    className={`${styles.bg2} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
                     style={mouseParallaxBase}
                 >
                     <Image
                         src={bg_about_base_2}
                         alt="bg_about_base_2"
-                        layout="intrinsic"
+                        layout="fixed"
                         width={133}
                         height={466}
                     />
                 </div>
-                <div className={styles.bg3} style={mouseParallaxBase}>
+                <div
+                    className={`${styles.bg1} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
+                    style={mouseParallaxTop}
+                >
+                    <Image
+                        src={bg_about_top_1}
+                        alt="bg_about_top_1"
+                        layout="fixed"
+                        width={133}
+                        height={466}
+                    />
+                </div>
+                <div
+                    className={`${styles.bg2} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
+                    style={mouseParallaxTop}
+                >
+                    <Image
+                        src={bg_about_top_2}
+                        alt="bg_about_top_2"
+                        layout="fixed"
+                        width={133}
+                        height={466}
+                    />
+                </div>
+            </div>
+            <div
+                className={`${styles.backdrop} ${
+                    aboutMe ? styles.active : null
+                }`}
+            ></div>
+            <div className="absolute w-[1280px] h-[720px]">
+                <div
+                    className={`${styles.bg3} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
+                    style={mouseParallaxBase}
+                >
                     <Image
                         src={bg_about_base_3}
                         alt="bg_about_base_3"
-                        layout="intrinsic"
+                        layout="fixed"
                         width={133}
                         height={466}
                     />
@@ -98,40 +143,27 @@ export default function AboutMe({ aboutMeActive, setAboutMeActive }) {
             />
             <div className="absolute w-[1280px] h-[720px]">
                 <div
-                    className={`${styles.bg1} ${inView ? styles.active : null}`}
+                    className={`${styles.bg3} ${
+                        inView ? styles.inView : null
+                    } ${aboutMe ? styles.active : null}`}
                     style={mouseParallaxTop}
                 >
-                    <Image
-                        src={bg_about_top_1}
-                        alt="bg_about_top_1"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div
-                    className={`${styles.bg2} ${inView ? styles.active : null}`}
-                    style={mouseParallaxTop}
-                >
-                    <Image
-                        src={bg_about_top_2}
-                        alt="bg_about_top_2"
-                        layout="intrinsic"
-                        width={133}
-                        height={466}
-                    />
-                </div>
-                <div className={styles.bg3} style={mouseParallaxTop}>
                     <Image
                         src={bg_about_top_3}
                         alt="bg_about_top_3"
-                        layout="intrinsic"
+                        layout="fixed"
                         width={133}
                         height={466}
                     />
                 </div>
             </div>
-            <ShowMoreButton mouseParallaxTitle={mouseParallaxButton} handleClick={() => setAboutMeActive(!aboutMeActive)} />
+            <button
+                className={styles.button}
+                style={mouseParallaxButton}
+                onClick={() => setAboutMe(!aboutMe)}
+            >
+                Show more
+            </button>
         </div>
     )
 }
