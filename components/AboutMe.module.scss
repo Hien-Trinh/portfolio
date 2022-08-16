@@ -16,8 +16,8 @@
     }
 
     &.active {
-        left: 35.3%;
-        width: 100px;
+        left: 37.7%;
+        width: 114px;
         opacity: 0;
     }
 }
@@ -40,8 +40,8 @@
     }
 
     &.active {
-        left: 49.1%;
-        width: 100px;
+        left: 51.4%;
+        width: 114px;
         opacity: 0;
     }
 }
@@ -60,7 +60,7 @@
         height 1500ms cubic-bezier(0, 0, 0.2, 1);
 
     &.active {
-        left: 63%;
+        left: 65%;
         width: 114px;
     }
 }
@@ -102,5 +102,29 @@
 
     &.active {
         opacity: 1;
+    }
+}
+
+.textbox {
+    position: relative;
+    width: 612px;
+    height: 466px;
+
+    .text {
+        position: absolute;
+        left: 0;
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+        text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 0;
+        top: 10%;
+        transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1), top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &.active {
+            opacity: 1;
+            top: 0;
+        }
     }
 }

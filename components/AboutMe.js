@@ -34,6 +34,12 @@ export default function AboutMe() {
         }px, 0px)`,
     }
 
+    const mouseParallaxText = {
+        transform: `translate3d(${(x - pageWidth / 2) / 120}px, ${
+            (y - pageHeight / 2) / 120
+        }px, 0px)`,
+    }
+
     const mouseParallaxTop = {
         transform: `translate3d(${(x - pageWidth / 2) / -50}px, ${
             (y - pageHeight / 2) / -50
@@ -156,6 +162,14 @@ export default function AboutMe() {
                         height={466}
                     />
                 </div>
+            </div>
+            <div className={styles.textbox}>
+                <p
+                    className={`${styles.text} ${aboutMe ? styles.active : null}`}
+                    style={mouseParallaxText}
+                >
+                    hello, my name is david
+                </p>
             </div>
             <button
                 className={styles.button}
