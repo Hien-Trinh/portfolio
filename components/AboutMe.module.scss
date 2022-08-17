@@ -78,9 +78,7 @@
         transform 1500ms;
 
     &.active {
-        top: 80px;
-        left: 700px;
-        transform: translate(0, 0);
+        transform: translate(-20px, -280px);
     }
 
     .title {
@@ -96,10 +94,6 @@
             top: 0;
         }
 
-        &.active {
-            top: 0;
-        }
-
         p {
             font-size: 128px;
             color: white;
@@ -107,6 +101,7 @@
             margin-right: 36px;
             margin-top: 20px;
             margin-bottom: 20px;
+            transition: font-size 1s ease;
         }
     }
 }
@@ -153,11 +148,12 @@
 
 .textbox {
     position: relative;
-    width: 612px;
+    width: 780px;
     height: 466px;
 
     .text {
         position: absolute;
+        width: 390px;
         left: 0;
         font-size: 24px;
         line-height: 32px;

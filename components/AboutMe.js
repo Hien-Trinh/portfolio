@@ -22,6 +22,8 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
+    const text = "Hello, I'm David. I'm a software engineer based in the UK. I'm passionate about building software that improves the world."
+
     const mouseParallaxBase = {
         transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
             (y - pageHeight / 2) / -80
@@ -168,7 +170,7 @@ export default function AboutMe() {
                     }`}
                     style={mouseParallaxText}
                 >
-                    hello, my name is david
+                    {text}
                 </p>
             </div>
             <button
