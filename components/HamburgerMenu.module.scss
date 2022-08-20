@@ -76,18 +76,25 @@ $light: #efefef;
 .menu {
     position: absolute;
     overflow: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    top: auto;
+    top: 0;
     left: 100%;
-    bottom: auto;
-    right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #1b2735;
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-delay: 0s;
+
     &.active {
         left: 0%;
         transition-delay: 0.4s;
+    }
+
+    .container {
+        width: 1470px;
+        height: 795px;
     }
 }
 
