@@ -1,7 +1,6 @@
 import styles from "./AboutMe.module.scss"
 import { useState } from "react"
 import Image from "next/image"
-import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
 import GetPageWidthHeight from "../lib/GetPageWidthHeight"
 import GetInView from "../lib/GetInView"
