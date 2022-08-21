@@ -173,11 +173,11 @@ export default function AboutMe() {
                 </p>
             </div>
             <button
-                className={styles.button}
+                className={`${styles.button} ${aboutMe ? styles.active : null}`}
                 style={mouseParallaxButton}
                 onClick={() => setAboutMe(!aboutMe)}
             >
-                Show more
+                {aboutMe ? "Show less" : "Show more"}
             </button>
         </div>
     )
