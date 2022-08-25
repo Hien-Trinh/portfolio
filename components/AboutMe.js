@@ -21,7 +21,10 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
-    const text = "Hello, I'm David. I'm a software engineer based in the UK. I'm passionate about building software that improves the world."
+    const text1 =
+        "Hello, I'm David. I'm a 17-year-old highschool student from Vietnam. I've made it my goal to learn something new everyday."
+    const text2 =
+        "I've just started my web development journey, but I'm determined to learn and experiment with any technology that I can get my hands on."
 
     const mouseParallaxBase = {
         transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
@@ -138,7 +141,11 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="absolute w-[1280px] h-[720px] flex items-center justify-center">
-                <div className={`${styles.hero} ${aboutMe ? styles.active : null}`}>
+                <div
+                    className={`${styles.hero} ${
+                        aboutMe ? styles.active : null
+                    }`}
+                >
                     <div
                         className={`${styles.title} ${
                             inView ? styles.inView : null
@@ -164,21 +171,31 @@ export default function AboutMe() {
             </div>
             <div className={styles.textbox}>
                 <p
-                    className={`${styles.text} ${
+                    className={`${styles.text1} ${
                         aboutMe ? styles.active : null
                     }`}
                     style={mouseParallaxText}
                 >
-                    {text}
+                    {text1}
                 </p>
+                <p
+                    className={`${styles.text2} ${
+                        aboutMe ? styles.active : null
+                    }`}
+                    style={mouseParallaxText}
+                >
+                    {text2}
+                </p>
+                <button
+                    className={`${styles.button} ${
+                        aboutMe ? styles.active : null
+                    }`}
+                    style={mouseParallaxButton}
+                    onClick={() => setAboutMe(!aboutMe)}
+                >
+                    {aboutMe ? "Show less" : "Show more"}
+                </button>
             </div>
-            <button
-                className={`${styles.button} ${aboutMe ? styles.active : null}`}
-                style={mouseParallaxButton}
-                onClick={() => setAboutMe(!aboutMe)}
-            >
-                {aboutMe ? "Show less" : "Show more"}
-            </button>
         </div>
     )
 }
