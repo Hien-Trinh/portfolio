@@ -106,8 +106,7 @@
 
 .button {
     position: absolute;
-    top: 65%;
-    left: 322px;
+    top: 60%;
     transform: translate(-68px);
     width: fit-content;
     height: fit-content;
@@ -132,8 +131,7 @@
     }
 
     &.active {
-        top: 80%;
-        left: 0;
+        top: 70%;
     }
 }
 
@@ -158,7 +156,7 @@
     width: 780px;
     height: 466px;
 
-    .text1 {
+    .profile_pic {
         position: absolute;
         width: 380px;
         left: 0;
@@ -180,6 +178,28 @@
         }
     }
 
+    .text1 {
+        position: absolute;
+        width: 380px;
+        left: 0;
+        font-size: 24px;
+        line-height: 32px;
+        color: white;
+        text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        opacity: 0;
+        top: 50%;
+        transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+            top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &.active {
+            opacity: 1;
+            top: 40%;
+            transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s,
+                top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s;
+        }
+    }
+
     .text2 {
         position: absolute;
         width: 380px;
@@ -191,15 +211,15 @@
         text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
         opacity: 0;
-        top: 50%;
+        top: 75%;
         transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
             top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active {
             opacity: 0.8;
-            top: 40%;
-            transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s,
-                top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s;
+            top: 65%;
+            transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.6s,
+                top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.6s;
         }
     }
 }

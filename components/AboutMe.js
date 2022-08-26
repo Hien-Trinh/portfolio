@@ -11,6 +11,7 @@ import bg_about_base_3 from "../public/images/bg_about_base_3.png"
 import bg_about_top_1 from "../public/images/bg_about_top_1.png"
 import bg_about_top_2 from "../public/images/bg_about_top_2.png"
 import bg_about_top_3 from "../public/images/bg_about_top_3.png"
+import profile_pic from "../public/images/profile_pic.png"
 
 export default function AboutMe() {
     const [x, y] = useMouseMove()
@@ -22,9 +23,9 @@ export default function AboutMe() {
     const inView = GetInView(pageNum)
 
     const text1 =
-        "Hello, I'm David. I'm a 17-year-old highschool student from Vietnam. I've made it my goal to learn something new everyday."
+        "Hello, I'm David. I'm a 17-year-old highschool student from Vietnam."
     const text2 =
-        "I've just started my web development journey, but I'm determined to learn and experiment with any technology that I can get my hands on."
+        "I've made it my goal to to learn and experiment with any technology that I can get my hands on."
 
     const mouseParallaxBase = {
         transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
@@ -170,6 +171,20 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className={styles.textbox}>
+                <div
+                    className={`${styles.profile_pic} ${
+                        aboutMe ? styles.active : null
+                    }`}
+                    style={mouseParallaxText}
+                >
+                    <Image
+                        src={profile_pic}
+                        alt="profile_pic"
+                        layout="fixed"
+                        width={150}
+                        height={150}
+                    ></Image>
+                </div>
                 <p
                     className={`${styles.text1} ${
                         aboutMe ? styles.active : null
@@ -186,16 +201,14 @@ export default function AboutMe() {
                 >
                     {text2}
                 </p>
-                <button
-                    className={`${styles.button} ${
-                        aboutMe ? styles.active : null
-                    }`}
-                    style={mouseParallaxButton}
-                    onClick={() => setAboutMe(!aboutMe)}
-                >
-                    {aboutMe ? "Show less" : "Show more"}
-                </button>
             </div>
+            <button
+                className={`${styles.button} ${aboutMe ? styles.active : null}`}
+                style={mouseParallaxButton}
+                onClick={() => setAboutMe(!aboutMe)}
+            >
+                {aboutMe ? "Show less" : "Show more"}
+            </button>
         </div>
     )
 }
