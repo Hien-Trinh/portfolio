@@ -174,7 +174,7 @@ export default function AboutMe() {
                     className={`${styles.profile_pic} ${
                         aboutMe ? styles.active : null
                     }`}
-                    style={mouseParallaxTitle}
+                    style={mouseParallaxText}
                 >
                     <Image
                         src={profile_pic}
