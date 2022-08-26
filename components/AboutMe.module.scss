@@ -57,11 +57,12 @@
     transition: left 1500ms cubic-bezier(0, 0, 0.2, 1),
         top 1500ms cubic-bezier(0, 0, 0.2, 1),
         width 1500ms cubic-bezier(0, 0, 0.2, 1),
-        height 1500ms cubic-bezier(0, 0, 0.2, 1);
+        opacity 1500ms cubic-bezier(0, 0, 0.2, 1);
 
     &.active {
         left: 65%;
         width: 114px;
+        opacity: 0;
     }
 }
 
@@ -73,10 +74,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 1500ms;
+    transition: left 1500ms cubic-bezier(0, 0, 0.2, 1),
+        opacity 1s cubic-bezier(0, 0, 0.2, 1);
 
     &.active {
-        transform: translate(-20px, -280px);
+        left: 56.6%;
+        opacity: 0;
     }
 
     .title {
@@ -104,37 +107,6 @@
     }
 }
 
-.button {
-    position: absolute;
-    top: 60%;
-    transform: translate(-68px);
-    width: fit-content;
-    height: fit-content;
-    background-color: #ff686b;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #ff686b;
-    border-radius: 9999px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    white-space: nowrap;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-    padding: 10px;
-    transition: top 1500ms cubic-bezier(0, 0, 0.2, 1),
-        left 1500ms cubic-bezier(0, 0, 0.2, 1);
-
-    &:hover {
-        background-color: transparent;
-        color: #ff686b;
-    }
-
-    &.active {
-        top: 70%;
-    }
-}
-
 .backdrop {
     position: absolute;
     top: 0;
@@ -155,11 +127,13 @@
     position: relative;
     width: 780px;
     height: 466px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .profile_pic {
         position: absolute;
-        width: 380px;
-        left: 0;
+        left: 315px;
         font-size: 24px;
         line-height: 32px;
         color: white;
@@ -181,7 +155,8 @@
     .text1 {
         position: absolute;
         width: 380px;
-        left: 0;
+        left: 200px;
+        text-align: center;
         font-size: 24px;
         line-height: 32px;
         color: white;
@@ -193,7 +168,7 @@
             top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active {
-            opacity: 1;
+            opacity: .9;
             top: 40%;
             transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s,
                 top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.3s;
@@ -202,8 +177,9 @@
 
     .text2 {
         position: absolute;
-        width: 380px;
-        left: 0;
+        width: 390px;
+        left: 195px;
+        text-align: center;
         font-size: 20px;
         font-style: italic;
         line-height: 32px;
@@ -211,15 +187,45 @@
         text-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
             0 6px 20px 0 rgba(0, 0, 0, 0.19);
         opacity: 0;
-        top: 75%;
+        top: 60%;
         transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
             top 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &.active {
             opacity: 0.8;
-            top: 65%;
+            top: 50%;
             transition: opacity 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.6s,
                 top 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) 1.6s;
+        }
+    }
+
+    .button {
+        position: absolute;
+        top: 69%;
+        width: fit-content;
+        height: fit-content;
+        background-color: #ff686b;
+        border-style: solid;
+        border-width: 2px;
+        border-color: #ff686b;
+        border-radius: 9999px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        white-space: nowrap;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        transition: top 1500ms cubic-bezier(0, 0, 0.2, 1),
+            left 1500ms cubic-bezier(0, 0, 0.2, 1);
+
+        &:hover {
+            background-color: transparent;
+            color: #ff686b;
+        }
+
+        &.active {
+            top: 85%;
         }
     }
 }

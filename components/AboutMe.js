@@ -22,8 +22,7 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
-    const text1 =
-        "Hello, I'm David. I'm a 17-year-old highschool student from Vietnam."
+    const text1 = "David. 17. Vietnam."
     const text2 =
         "I've made it my goal to to learn and experiment with any technology that I can get my hands on."
 
@@ -175,7 +174,7 @@ export default function AboutMe() {
                     className={`${styles.profile_pic} ${
                         aboutMe ? styles.active : null
                     }`}
-                    style={mouseParallaxText}
+                    style={mouseParallaxTitle}
                 >
                     <Image
                         src={profile_pic}
@@ -201,14 +200,16 @@ export default function AboutMe() {
                 >
                     {text2}
                 </p>
+                <button
+                    className={`${styles.button} ${
+                        aboutMe ? styles.active : null
+                    }`}
+                    style={mouseParallaxButton}
+                    onClick={() => setAboutMe(!aboutMe)}
+                >
+                    {aboutMe ? "Show less" : "Show more"}
+                </button>
             </div>
-            <button
-                className={`${styles.button} ${aboutMe ? styles.active : null}`}
-                style={mouseParallaxButton}
-                onClick={() => setAboutMe(!aboutMe)}
-            >
-                {aboutMe ? "Show less" : "Show more"}
-            </button>
         </div>
     )
 }
