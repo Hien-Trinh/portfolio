@@ -16,7 +16,7 @@ export default function Home() {
 
     const pageNum = 0
     const top = "35%"
-    const title = "get good."
+    const title = "David Trinh"
     const inView = GetInView(pageNum)
 
     const mouseParallax = (n) => {
