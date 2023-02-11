@@ -26,12 +26,6 @@ export default function AboutMe() {
     const text2 =
         "I've made it my goal to to learn and experiment with any technology that I can get my hands on."
 
-    const mouseParallaxBase = {
-        transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
-            (y - pageHeight / 2) / -80
-        }px, 0px)`,
-    }
-
     const mouseParallaxTitle = {
         transform: `translate3d(${(x - pageWidth / 2) / 40}px, ${
             (y - pageHeight / 2) / 40
@@ -41,6 +35,12 @@ export default function AboutMe() {
     const mouseParallaxText = {
         transform: `translate3d(${(x - pageWidth / 2) / 120}px, ${
             (y - pageHeight / 2) / 120
+        }px, 0px)`,
+    }
+
+    const mouseParallaxBase = {
+        transform: `translate3d(${(x - pageWidth / 2) / -80}px, ${
+            (y - pageHeight / 2) / -80
         }px, 0px)`,
     }
 
