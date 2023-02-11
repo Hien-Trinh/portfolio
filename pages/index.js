@@ -5,6 +5,7 @@ import Wrapper from "../layouts/Wrapper"
 import Home from "../components/Home"
 import AboutMe from "../components/AboutMe"
 import Projects from "../components/Projects"
+import Contact from "../components/Contact"
 import { useState } from "react"
 
 export default function Main() {
@@ -21,6 +22,7 @@ export default function Main() {
                     <Home />
                     <AboutMe aboutMeActive={aboutMeActive} setAboutMeActive={setAboutMeActive} />
                     <Projects />
+                    <Contact />
                 </Wrapper>
                 <Header setPageNum={setPageNum} />
             </StarField>
