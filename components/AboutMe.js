@@ -22,7 +22,7 @@ export default function AboutMe() {
     const title = "about"
     const inView = GetInView(pageNum)
 
-    const text1 = "David. 17. Vietnam."
+    const text1 = "David. 18. Vietnam."
     const text2 =
         "I've made it my goal to to learn and experiment with any technology that I can get my hands on."
 

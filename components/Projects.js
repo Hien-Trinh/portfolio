@@ -1,23 +1,25 @@
 import Hero from "../layouts/Hero"
 import useMouseMove from "../lib/UseMouseMove"
+import GetPageWidthHeight from "../lib/GetPageWidthHeight"
 import GetInView from "../lib/GetInView"
 
 export default function Projects() {
     const [x, y] = useMouseMove()
+    const [pageWidth, pageHeight] = GetPageWidthHeight()
 
     const pageNum = 2
     const title = "projects"
     const inView = GetInView(pageNum)
 
     const mouseParallaxTitle = {
-        transform: `translate3d(${(x - 720) / 40}px, ${
-            (y - 397.5) / 40
+        transform: `translate3d(${(x - pageWidth / 2) / 40}px, ${
+            (y - pageHeight / 2) / 40
         }px, 0px)`,
     }
 
     const mouseParallaxTop = {
-        transform: `translate3d(${(x - 720) / -50}px, ${
-            (y - 397.5) / -50
+        transform: `translate3d(${(x - pageWidth / 2) / -50}px, ${
+            (y - pageHeight / 2) / -50
         }px, 0px)`,
     }
 
